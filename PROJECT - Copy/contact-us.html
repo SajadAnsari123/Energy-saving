@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Use Energy-Efficient Appliances?</title>
+    <link rel="stylesheet" href="copystyle.css" />
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+    <style>
+              nav a {
+    color: white;
+    text-decoration: none;
+}
+                button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            background-color: #40bd0b;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease, transform 0.2s;
+        }
+
+        button:hover {
+            background-color: #444;
+            transform: scale(1.05);
+        }
+        .mainbox {
+            height: 10vh;
+            position: relative;
+            background-position: center center;
+            background-size: max(1400, 100vw);
+            background-repeat: no-repeat;
+        }
+
+        .mainbox .bbox {
+            background-color: rgb(0, 0, 0);
+            height: 80vh;
+            width: 100%;
+            opacity: 0.2;
+            position: absolute;
+            top: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            max-width: 100vw;
+            margin: auto;
+            height: 65px;
+        }
+
+        .toc-container {
+            width: 500px;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            /* padding: 20px; */
+            margin: 60px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .toc-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .toc-header i {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .toc-list {
+            padding-left: 20px;
+        }
+
+        .toc-list li {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        .sectionfirstt {
+            /* display: flex; */
+            /* color: white; */
+            align-items: center;
+            justify-content: space-between;
+            max-width: 80vw;
+            margin: auto;
+            padding: 20px 20px;
+            /* gap: 20px; */
+
+        }
+
+        .sectionfirstt p {
+                {
+                margin-top: 0;
+                /* Ensures no extra space is added above the paragraph */
+                line-height: 1.6;
+                /* Improves readability */
+            }
+        }
+
+        .sectionfirstt h2 {
+            margin-bottom: 15px;
+            /* Adjusts the space below the heading */
+            font-size: 30px;
+            /* Increases the font size */
+            font-weight: bold;
+            /* Makes the font bold */
+        }
+
+        .gapp h2 {
+            margin-top: 70px;
+            /* gap: 20px; */
+        }
+
+        .bbox-container {
+            width: 80vw;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 50px 120px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .bbox-container h3 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .marg {
+            margin-top: 30px;
+        }
+
+        /* Footer Grid Layout */
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            /* Equal spacing */
+            max-width: 1200px;
+            /* Restrict width for better design */
+            margin: auto;
+            flex-wrap: wrap;
+        }
+
+        /* Footer Columns */
+        .footer-item {
+            flex: 1;
+            min-width: 200px;
+            /* Ensure proper spacing */
+            text-align: left;
+            padding: 10px;
+        }
+
+        /* Footer Headings */
+        .footer-item h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            border-bottom: 2px solid #555;
+            padding-bottom: 5px;
+        }
+
+        /* Footer Links */
+        .footer-item a {
+            display: block;
+            color: #ddd;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 5px 0;
+            transition: color 0.3s ease-in-out;
+        }
+
+        /* Hover Effect */
+        .footer-item a:hover {
+            color: #55ff55;
+        }
+
+        .footer {
+            width: 100%;
+            background-color: #222;
+            /* Dark background */
+            color: white;
+            padding-top: 30px;
+            text-align: center;
+            padding-bottom: 50px;
+            margin-bottom: 0;
+
+        }
+
+        /* Welcome text */
+        .padd {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .mainbox nav {
+            background-color: rgb(14, 25, 8);
+        }
+
+        .mainbox nav a {
+            color: white;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            /* display: flex; */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f9fa;
+        }
+
+        .contact-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+
+
+        }
+
+        .contact-container h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .contact-item img {
+            width: 30px;
+            height: 30px;
+            margin-right: 15px;
+        }
+
+        .contact-item div {
+            color: #333;
+        }
+
+        .contact-item a {
+            color: #d58534;
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        .icon {
+            width: 30px;
+            height: 30px;
+            margin-right: 15px;
+        }
+        .active {
+    color: white;
+    text-decoration: none;
+    padding: 10px 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+.active:hover {
+    background-color: #73ea2e;
+    color: white;
+    box-shadow: 0 4px 10px #363736;
+    transform: scale(1.05);
+}
+
+
+/* MOBILE RESPONSIVE STYLES */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+        font-size: 16px;
+    }
+
+    .mainbox {
+        height: auto;
+        background-size: cover;
+    }
+
+    .toc-container,
+    .bbox-container,
+    .contact-container {
+        width: 90%;
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    .sectionfirstt,
+    .firsstt {
+        flex-direction: column;
+        padding: 15px;
+        gap: 20px;
+        max-width: 95vw;
+    }
+
+    .sectionfirstt h2,
+    .bbox-container h3 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .sectionfirstt p {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footer-item {
+        min-width: 100%;
+        padding: 10px 0;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .contact-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contact-item img,
+    .icon {
+        margin-bottom: 10px;
+    }
+
+    .gapp h2 {
+        margin-top: 40px;
+        font-size: 24px;
+    }
+}
+
+
+    </style>
+</head>
+
+<body>
+    <div class="mainbox">
+
+        <header>
+            <nav>
+                <span><a href="home.html"> <img src="logo.png" alt="Netflix Logo" width="90px"> </a> </span>
+                <a class="active" href="Home.html">Home</a>
+                <a  class="active" href="blog.html">Blog</a>
+                <a  class="active" href="calculator.html">Calculate Savings</a>
+                <a  class="active" href="userStoriesblog.html">User Stories</a>
+                <a  class="active" href="faq.html">FAQ's</a>
+                <div class="auth-buttons">
+                    <a href="login.html">
+                        <button>Log Out</button></a>
+                    <!-- <button>Sign Up</button>                 -->
+                </div>
+            </nav>
+        </header>
+    </div>
+
+
+
+    <section>
+
+        <div class="contact-container">
+            <h2>Main Office</h2>
+            <div class="contact-item">
+                <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.16 19.51 19.51 0 0 1-6-6A19.79 19.79 0 0 1 2.08 4 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.72 12.34 12.34 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.22a2 2 0 0 1 2.11-.45 12.34 12.34 0 0 0 2.81.7 2 2 0 0 1 1.72 2z" />
+                    </svg>
+                </span>
+
+                <div>
+                    <strong>Call Us</strong><br>
+                    <a href="tel:+977-9824241947">+977-9824241947</a> / <a href="tel:+977-9766543624">+977-9766543624</a>
+                </div>
+            </div>
+            <div class="contact-item">
+                <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0 0 48 48">
+                        <path fill="#fff"
+                            d="M4.9,43.3l2.7-9.8C5.9,30.6,5,27.3,5,24C5,13.5,13.5,5,24,5c5.1,0,9.8,2,13.4,5.6	C41,14.2,43,18.9,43,24c0,10.5-8.5,19-19,19c0,0,0,0,0,0h0c-3.2,0-6.3-0.8-9.1-2.3L4.9,43.3z">
+                        </path>
+                        <path fill="#fff"
+                            d="M4.9,43.8c-0.1,0-0.3-0.1-0.4-0.1c-0.1-0.1-0.2-0.3-0.1-0.5L7,33.5c-1.6-2.9-2.5-6.2-2.5-9.6	C4.5,13.2,13.3,4.5,24,4.5c5.2,0,10.1,2,13.8,5.7c3.7,3.7,5.7,8.6,5.7,13.8c0,10.7-8.7,19.5-19.5,19.5c-3.2,0-6.3-0.8-9.1-2.3	L5,43.8C5,43.8,4.9,43.8,4.9,43.8z">
+                        </path>
+                        <path fill="#cfd8dc"
+                            d="M24,5c5.1,0,9.8,2,13.4,5.6C41,14.2,43,18.9,43,24c0,10.5-8.5,19-19,19h0c-3.2,0-6.3-0.8-9.1-2.3	L4.9,43.3l2.7-9.8C5.9,30.6,5,27.3,5,24C5,13.5,13.5,5,24,5 M24,43L24,43L24,43 M24,43L24,43L24,43 M24,4L24,4C13,4,4,13,4,24	c0,3.4,0.8,6.7,2.5,9.6L3.9,43c-0.1,0.3,0,0.7,0.3,1c0.2,0.2,0.4,0.3,0.7,0.3c0.1,0,0.2,0,0.3,0l9.7-2.5c2.8,1.5,6,2.2,9.2,2.2	c11,0,20-9,20-20c0-5.3-2.1-10.4-5.8-14.1C34.4,6.1,29.4,4,24,4L24,4z">
+                        </path>
+                        <path fill="#40c351"
+                            d="M35.2,12.8c-3-3-6.9-4.6-11.2-4.6C15.3,8.2,8.2,15.3,8.2,24c0,3,0.8,5.9,2.4,8.4L11,33l-1.6,5.8	l6-1.6l0.6,0.3c2.4,1.4,5.2,2.2,8,2.2h0c8.7,0,15.8-7.1,15.8-15.8C39.8,19.8,38.2,15.8,35.2,12.8z">
+                        </path>
+                        <path fill="#fff" fill-rule="evenodd"
+                            d="M19.3,16c-0.4-0.8-0.7-0.8-1.1-0.8c-0.3,0-0.6,0-0.9,0	s-0.8,0.1-1.3,0.6c-0.4,0.5-1.7,1.6-1.7,4s1.7,4.6,1.9,4.9s3.3,5.3,8.1,7.2c4,1.6,4.8,1.3,5.7,1.2c0.9-0.1,2.8-1.1,3.2-2.3	c0.4-1.1,0.4-2.1,0.3-2.3c-0.1-0.2-0.4-0.3-0.9-0.6s-2.8-1.4-3.2-1.5c-0.4-0.2-0.8-0.2-1.1,0.2c-0.3,0.5-1.2,1.5-1.5,1.9	c-0.3,0.3-0.6,0.4-1,0.1c-0.5-0.2-2-0.7-3.8-2.4c-1.4-1.3-2.4-2.8-2.6-3.3c-0.3-0.5,0-0.7,0.2-1c0.2-0.2,0.5-0.6,0.7-0.8	c0.2-0.3,0.3-0.5,0.5-0.8c0.2-0.3,0.1-0.6,0-0.8C20.6,19.3,19.7,17,19.3,16z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </span>
+
+                <div>
+                    <strong>WhatsApp Us</strong><br>
+                    <a href="https://wa.me/9818051853">9818051853</a>
+                </div>
+            </div>
+            <div class="contact-item">
+                <img src="gmail.png" alt="Address">
+
+                <div>
+                    <strong>Mail Us</strong><br>
+                    <a href="mailto:sajad22013281@iimscollege.edu.np">sajad22013281@iimscollege.edu.np</a>
+                </div>
+            </div>
+            <div class="contact-item">
+                <img src="addresss.png" alt="Address">
+                <div>
+                    <strong>Address</strong><br>
+                    Maitidevi-29, Kathmandu, Nepal
+                </div>
+            </div>
+       
+        </div>
+    </section>
+
+
+
+
+
+
+</body>
+<footer class="footer">
+    <div class="padd">Welcome to Energy Saver..! </div>
+
+    <div class="footer-container">
+        <div class="footer-item">
+            <h4>Company</h4>
+            <a href="home.html">Home</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact-us.html">Contact Us</a>
+          
+          
+        </div>
+
+        <div class="footer-item">
+            <h4>Quick Links</h4>
+            <a href="faq.html">FAQ</a>
+            <a href="userStoriesblog.html">User Stories</a>
+            <a href="calculator.html">Calculate Savings</a>
+        </div>
+
+        <div class="footer-item">
+            <h4>Orders</h4>
+            <a href="about-us.html">About Us</a>
+            <a href="terms&condition.html">Terms-Conditions</a>
+            <a href="privacy-policy.html">Privac-Policy</a>
+        </div>
+
+        <div class="footer-item">
+            <h4>Team Member</h4>
+            <a href="home.html">Sajad Ansari</a>
+            <a href="home.html">Aryan Kushwaha</a>
+            <a href="home.html">Kamil Saifi</a>
+            <a href="home.html">Shrijan Maharjan</a>
+            <a href="home.html">Roshan Shrestha</a>
+        </div>
+    </div>
+</footer>
+
+</html>

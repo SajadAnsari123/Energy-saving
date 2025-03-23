@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Use Energy-Efficient Appliances?</title>
+    <link rel="stylesheet" href="copystyle.css" />
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+    <style>
+        
+             button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            background-color: #40bd0b;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease, transform 0.2s;
+        }
+
+        button:hover {
+            background-color: #444;
+            transform: scale(1.05);
+        }
+        .mainbox {
+            height: 10vh;
+            position: relative;
+            background-position: center center;
+            background-size: max(1400, 100vw);
+            background-repeat: no-repeat;
+        }
+
+        .mainbox .bbox {
+            background-color: rgb(0, 0, 0);
+            height: 80vh;
+            width: 100%;
+            opacity: 0.2;
+            position: absolute;
+            top: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            max-width: 100vw;
+            margin: auto;
+            height: 65px;
+        }
+
+        .toc-container {
+            width: 500px;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            /* padding: 20px; */
+            margin: 60px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .toc-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .toc-header i {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .toc-list {
+            padding-left: 20px;
+        }
+
+        .toc-list li {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        .sectionfirstt {
+            /* display: flex; */
+            /* color: white; */
+            align-items: center;
+            justify-content: space-between;
+            max-width: 80vw;
+            margin: auto;
+            padding: 20px 20px;
+            /* gap: 20px; */
+
+        }
+
+        .sectionfirstt p {
+                {
+                margin-top: 0;
+                /* Ensures no extra space is added above the paragraph */
+                line-height: 1.6;
+                /* Improves readability */
+            }
+        }
+
+        .sectionfirstt h2 {
+            margin-bottom: 15px;
+            /* Adjusts the space below the heading */
+            font-size: 30px;
+            /* Increases the font size */
+            font-weight: bold;
+            /* Makes the font bold */
+        }
+
+        .gapp h2 {
+            margin-top: 70px;
+            /* gap: 20px; */
+        }
+
+        .bbox-container {
+            width: 80vw;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 50px 120px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .bbox-container h3 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .marg {
+            margin-top: 30px;
+        }
+
+        /* Footer Grid Layout */
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            /* Equal spacing */
+            max-width: 1200px;
+            /* Restrict width for better design */
+            margin: auto;
+            flex-wrap: wrap;
+        }
+
+        /* Footer Columns */
+        .footer-item {
+            flex: 1;
+            min-width: 200px;
+            /* Ensure proper spacing */
+            text-align: left;
+            padding: 10px;
+        }
+
+        /* Footer Headings */
+        .footer-item h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            border-bottom: 2px solid #555;
+            padding-bottom: 5px;
+        }
+
+        /* Footer Links */
+        .footer-item a {
+            display: block;
+            color: #ddd;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 5px 0;
+            transition: color 0.3s ease-in-out;
+        }
+
+        /* Hover Effect */
+        .footer-item a:hover {
+            color: #55ff55;
+        }
+
+        .footer {
+            width: 100%;
+            background-color: #222;
+            /* Dark background */
+            color: white;
+            padding-top: 30px;
+            text-align: center;
+            padding-bottom: 50px;
+            margin-bottom: 0;
+
+        }
+
+        .footerr {
+            width: 100%;
+            background-color: #ffffff;
+            /* Dark background */
+
+            color: white;
+            padding-top: 30px;
+            text-align: center;
+            padding-bottom: 50px;
+            margin-bottom: 0;
+
+        }
+
+        .footerr-container {
+            display: flex;
+            justify-content: space-around;
+            /* Equal spacing */
+            max-width: 1200px;
+            /* Restrict width for better design */
+            margin: auto;
+            flex-wrap: wrap;
+        }
+
+        .footerr-item {
+            flex: 1;
+            min-width: 200px;
+            /* Ensure proper spacing */
+            text-align: left;
+            padding: 10px;
+            /* border:5px solid #9c1a1a; */
+        }
+
+        .footerr-item:hoover {
+            background-color: #c93535;
+        }
+
+        /* Welcome text */
+        .padd {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .footerr-item img {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 12px;
+        }
+
+        /* Hover effect */
+        .footerr-item img:hover {
+            transform: scale(1.5);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        }
+        .seperator{
+            height: 2px;
+            background-color: #222;
+        }
+        .video-container {
+        display: flex;
+        justify-content: center;
+        background-color: #c8f0ff;
+        align-items: center;
+        height: 100vh; /* Adjust height as needed */
+        margin-top: -50px;
+    }
+
+    iframe {
+        width: 800px;  /* Increased width */
+        height: 450px; /* Increased height */
+        max-width: 100%;
+    }
+    .mainbox nav{
+        background-color: rgb(14, 25, 8);
+    }
+    .mainbox nav a{
+        color: white;
+    }
+    .active {
+    color: white;
+    text-decoration: none;
+    padding: 10px 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+.active:hover {
+    background-color: #73ea2e;
+    color: white;
+    box-shadow: 0 4px 10px #363736;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .toc-container,
+    .box-container {
+        width: 90%;
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    .sectionfirstt,
+    .sectionfirst,
+    .firsstt {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .sectionfirstt h2,
+    .sectionfirst h2,
+    .gapp h2 {
+        font-size: 22px;
+    }
+
+    .sectionfirstt p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .imagee {
+        margin-left: 0;
+        justify-content: center;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .footer-item {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .footer-item h4 {
+        font-size: 16px;
+    }
+
+    .footer-item a {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .mainbox {
+        height: auto;
+    }
+
+    .mainbox .bbox {
+        height: auto;
+    }
+}
+    </style>
+</head>
+
+<body>
+    <div class="mainbox">
+
+        <nav >
+            <span><img src="logo.png" alt="netflix" width="90px" /></span>
+          
+            <a class="active" href="Home.html">Home</a>
+            <a  class="active" href="blog.html">Blog</a>
+            <a  class="active" href="calculator.html">Calculate Savings</a>
+            <a  class="active" href="userStoriesblog.html">User Stories</a>
+            <a  class="active" href="faq.html">FAQ's</a>
+
+              <div class="auth-buttons">
+                    <a href="login.html">
+                    <button>Log Out</button></a>
+                    <!-- <button>Sign Up</button>                 -->
+                </div>
+        </nav>
+    </div>
+
+
+
+    <section class="ffirstt">
+        <div class="footerr">
+
+
+            <div class="footerr-container">
+                <div class="footerr-item">
+
+                    <a href="https://www.daraz.com.np/#hp-just-for-you"><img src="daraz.png" alt="daraz" width="100px"
+                            height="100px"></a>
+                </div>
+
+                <div class="footerr-item">
+
+                    <a href="https://www.amazon.in/Induction-Cooktops/b?ie=UTF8&node=1380068031"><img src="amazon.png"
+                            alt="amazon" width="100px" height="100px"></a>
+
+
+                </div>
+
+                <div class="footerr-item">
+                    <a href="https://www.samsung.com/us/home-appliances/cooktops-and-hoods/induction-cooktops/"><img
+                            src="Samsung_Logo.svg.png" alt="Samsung_Logo" width="100px" height="100px"></a>
+
+
+                </div>
+
+                <div class="footerr-item">
+
+                    <a href="https://www.lg.com/us/induction-ranges"><img src="lg.png" alt="lg" width="100px"
+                            height="100px"></a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="footerr">
+
+
+            <div class="footerr-container">
+                <div class="footerr-item">
+
+                    <a href="https://www.flipkart.com/induction-cooktops/pr?sid=j9e,m38,575"><img src="flipkart.png"
+                            alt="flipkart" width="100px" height="100px"></a>
+                </div>
+
+                <div class="footerr-item">
+
+                    <a href="https://www.ebay.com/b/Induction-Cooktops/71246/bn_1643557"><img src="ebay.png" alt="ebay"
+                            width="100px" height="100px"></a>
+
+
+                </div>
+
+                <div class="footerr-item">
+                    <a
+                        href="https://www.reliancedigital.in/collection/induction-cookers?page_no=1&page_size=12&page_type=number"><img
+                            src="Reliance.png" alt="Reliance" width="100px" height="100px"></a>
+
+
+                </div>
+
+                <div class="footerr-item">
+
+                    <a href="https://www.walmart.com/c/kp/induction-range"><img src="walmart.png" alt="walmart"
+                            width="100px" height="100px"></a>
+
+
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </section>
+    <div class="seperator"></div>
+<section>
+    <div class="video-container">
+        <iframe width="800" height="450" 
+            src="https://www.youtube.com/embed/pY6fAYkscTY?si=3P3ZZG81g_ubjSZM" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
+        </iframe>
+    </div>
+</section>
+
+
+
+</body>
+<footer class="footer">
+    <div class="padd">Welcome to Energy Saver..! </div>
+
+    <div class="footer-container">
+        <div class="footer-item">
+            <h4>Company</h4>
+            <a href="home.html">Home</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact-us.html">Contact Us</a>
+          
+          
+        </div>
+
+        <div class="footer-item">
+            <h4>Quick Links</h4>
+            <a href="faq.html">FAQ</a>
+            <a href="userStoriesblog.html">User Stories</a>
+            <a href="calculator.html">Calculate Savings</a>
+        </div>
+
+        <div class="footer-item">
+            <h4>Orders</h4>
+            <a href="about-us.html">About Us</a>
+            <a href="terms&condition.html">Terms-Conditions</a>
+            <a href="privacy-policy.html">Privac-Policy</a>
+        </div>
+
+        <div class="footer-item">
+            <h4>Team Member</h4>
+            <a href="home.html">Sajad Ansari</a>
+            <a href="home.html">Aryan Kushwaha</a>
+            <a href="home.html">Kamil Saifi</a>
+            <a href="home.html">Shrijan Maharjan</a>
+            <a href="home.html">Roshan Shrestha</a>
+        </div>
+    </div>
+</footer>
+
+</html>

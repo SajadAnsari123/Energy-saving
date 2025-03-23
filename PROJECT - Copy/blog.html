@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Use Energy-Efficient Appliances?</title>
+    <link rel="stylesheet" href="copystyle.css" />
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+    <style>
+                  .active {
+    color: white;
+    text-decoration: none;
+    padding: 10px 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+.active:hover {
+    background-color: #73ea2e;
+    color: white;
+    box-shadow: 0 4px 10px #363736;
+    transform: scale(1.05);
+}
+              nav a {
+    color: white;
+    text-decoration: none;
+}
+        .mainbox {
+            height: 10vh;
+            position: relative;
+            background-position: center center;
+            background-size: max(1400, 100vw);
+            background-repeat: no-repeat;
+        }
+
+        .mainbox .bbox {
+            background-color: rgb(0, 0, 0);
+            height: 80vh;
+            width: 100%;
+            opacity: 0.2;
+            position: absolute;
+            top: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            max-width: 100vw;
+            margin: auto;
+            height: 65px;
+        }
+
+        .firstt .imagee {}
+
+        .toc-container {
+            width: 500px;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            /* padding: 20px; */
+            margin: 60px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .toc-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .toc-header i {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .toc-list {
+            padding-left: 20px;
+        }
+
+        .toc-list li {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        .sectionfirstt {
+            /* display: flex; */
+            /* color: white; */
+            align-items: center;
+            justify-content: space-between;
+            max-width: 80vw;
+            margin: auto;
+            padding: 20px 20px;
+            /* gap: 20px; */
+
+        }
+
+        .sectionfirstt p {
+                {
+                margin-top: 0;
+                /* Ensures no extra space is added above the paragraph */
+                line-height: 1.6;
+                /* Improves readability */
+            }
+        }
+
+        .sectionfirstt h2 {
+            margin-bottom: 15px;
+            /* Adjusts the space below the heading */
+            font-size: 30px;
+            /* Increases the font size */
+            font-weight: bold;
+            /* Makes the font bold */
+        }
+
+        .gapp h2 {
+            margin-top: 70px;
+            /* gap: 20px; */
+        }
+
+        .box-container {
+            width: 900px;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 50px 60px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .box-container h3 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .marg {
+            margin-top: 30px;
+        }
+
+        /* Footer Grid Layout */
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            /* Equal spacing */
+            max-width: 1200px;
+            /* Restrict width for better design */
+            margin: auto;
+            flex-wrap: wrap;
+        }
+
+        /* Footer Columns */
+        .footer-item {
+            flex: 1;
+            min-width: 200px;
+            /* Ensure proper spacing */
+            text-align: left;
+            padding: 10px;
+        }
+
+        /* Footer Headings */
+        .footer-item h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            border-bottom: 2px solid #555;
+            padding-bottom: 5px;
+        }
+
+        /* Footer Links */
+        .footer-item a {
+            display: block;
+            color: #ddd;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 5px 0;
+            transition: color 0.3s ease-in-out;
+        }
+
+        /* Hover Effect */
+        .footer-item a:hover {
+            color: #55ff55;
+        }
+
+        .footer {
+            width: 100%;
+            background-color: #222;
+            /* Dark background */
+            color: white;
+            padding-top: 30px;
+            text-align: center;
+            padding-bottom: 50px;
+            margin-bottom: 0;
+
+        }
+
+        /* Welcome text */
+        .padd {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .sectionfirst {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 20px;
+
+        }
+
+        .imagee {
+            flex: 1;
+            position: relative;
+            display: flex;
+            justify-content: flex-start;
+            /* Align image left */
+            margin-left: -60px;
+        }
+
+        /* Section Layout */
+        .firsstt {
+            display: flex;
+            color: rgb(11, 8, 8);
+            align-items: center;
+            justify-content: space-between;
+            max-width: 80vw;
+            margin: auto;
+            padding: 30px 20px;
+            gap: 10px;
+        }
+
+        .mainbox nav {
+            background-color: rgb(14, 25, 8);
+        }
+
+        .mainbox nav a {
+            color: white;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            background-color: #40bd0b;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease, transform 0.2s;
+        }
+
+        button:hover {
+            background-color: #444;
+            transform: scale(1.05);
+        }
+        @media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .toc-container,
+    .box-container {
+        width: 90%;
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    .sectionfirstt,
+    .sectionfirst,
+    .firsstt {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .sectionfirstt h2,
+    .sectionfirst h2,
+    .gapp h2 {
+        font-size: 22px;
+    }
+
+    .sectionfirstt p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .imagee {
+        margin-left: 0;
+        justify-content: center;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .footer-item {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .footer-item h4 {
+        font-size: 16px;
+    }
+
+    .footer-item a {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .mainbox {
+        height: auto;
+    }
+
+    .mainbox .bbox {
+        height: auto;
+    }
+}
+    </style>
+</head>
+
+<body>
+    <div class="mainbox">
+
+        <nav>
+            <span><a href="home.html"> <img src="logo.png" alt="Netflix Logo" width="90px"> </a> </span>
+            <a class="active" href="Home.html">Home</a>
+            <a  class="active" href="blog.html">Blog</a>
+            <a  class="active" href="calculator.html">Calculate Savings</a>
+            <a  class="active" href="userStoriesblog.html">User Stories</a>
+            <a  class="active" href="faq.html">FAQ's</a>
+            <div class="auth-buttons">
+                <a href="login.html">
+                    <button>Log Out</button></a>
+            </div>
+        </nav>
+    </div>
+
+
+
+
+    <section class="firsstt">
+
+
+        <div class="imagee">
+            <img src="blog1.png" alt="neflix imagee" width="650px" height="400px">
+        </div>
+        <div class="sectionfirst">
+            <h1>Use Energy-Efficient Appliances?</h1>
+            <p>Energy efficiency is causing a revolution in the field of household appliances in a world where
+                sustainability is a major concern. A new generation of innovative appliances that are committed to
+                lowering our carbon footprint while also being convenient to use is emerging as we approach the end of
+                2023. <br><br>
+                These cutting-edge appliances integrate AI-driven automation, smart sensors, and IoT connectivity to
+                optimize energy consumption in real time. From refrigerators that adjust cooling based on usage patterns
+                to washing machines that minimize water and electricity waste, these innovations are reshaping modern
+                households. As governments and manufacturers push for stricter energy efficiency standards, adopting
+                these smart appliances can lead to significant cost savings while contributing to a greener planet.
+            </p>
+            <div>
+                <a href="blog1.html" target="_blank"><button>Read More.</button></a>
+            </div>
+        </div>
+
+
+    </section>
+
+    <section class="firsstt">
+
+
+        <div class="imagee">
+            <img src="blog2.png" alt="neflix imagee" width="650px" height="400px">
+        </div>
+        <div class="sectionfirst">
+            <h1>Optimize Power Usage ?</h1>
+            <p>Once you’re on the path to net zero, the next steps tend to present themselves naturally. How quickly you
+                travel along the path is up to you; the key is to keep moving. No matter your timeframe, each project is
+                an opportunity for an improvement in home energy performance. With that in mind, develop a plan that
+                considers the most effective combination of home improvements within your budget, and make each one
+                count toward reaching your goal of a home that can generate as much energy as it uses. <br><br>
+                Start by identifying areas where energy efficiency can be improved, such as insulation, lighting, and
+                smart appliances. Investing in renewable energy sources like solar panels can further accelerate your
+                journey. Regular monitoring of energy consumption and making small, consistent changes can lead to
+                significant long-term savings.
+
+
+            </p>
+            <div>
+                <a href="blog2.html" target="_blank"><button>Read More.</button></a>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="firsstt">
+
+
+        <div class="imagee">
+            <img src="blog3.png" alt="neflix imagee" width="650px" height="400px">
+        </div>
+        <div class="sectionfirst">
+            <h1>Efficient Cooking & LPG Usage?</h1>
+            <p>The advancement of smart home technology has transformed many facets of our life, including cooking. The
+                new culinary partners for contemporary kitchens are smart cooktops, smart induction, or stovetops. These
+                clever appliances take cooking to a new level by fusing cutting-edge technology, networking, and
+                artificial intelligence (AI). Market research indicates that the desire for practical and effective
+                cooking solutions has propelled continuous expansion in the global market for smart cooktops.
+
+                <br><br>These advanced cooktops offer precise temperature control, automated cooking settings, and
+                seamless integration with smart home assistants. Features like remote monitoring via mobile apps and
+                energy-efficient designs make them both convenient and sustainable. Additionally, making cooking more intuitive
+                and enjoyable.
+
+            </p>
+            <div>
+                <a href="blogpage3.html" target="_blank"><button>Read More.</button></a>
+            </div>
+        </div>
+
+    </section>
+</body>
+<footer class="footer">
+    <div class="padd">Welcome to Energy Saver..! </div>
+
+    <div class="footer-container">
+        <div class="footer-item">
+            <h4>Company</h4>
+            <a href="home.html">Home</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact-us.html">Contact Us</a>   
+        </div>
+
+        <div class="footer-item">
+            <h4>Quick Links</h4>
+            <a href="faq.html">FAQ</a>
+            <a href="userStoriesblog.html">User Stories</a>
+            <a href="calculator.html">Calculate Savings</a>
+        </div>
+
+        <div class="footer-item">
+            <h4>Orders</h4>
+            <a href="about-us.html">About Us</a>
+            <a href="terms&condition.html">Terms-Conditions</a>
+            <a href="privacy-policy.html">Privac-Policy</a>
+        </div>
+
+        <div class="footer-item">
+            <h4>Team Member</h4>
+            <a href="home.html">Sajad Ansari</a>
+            <a href="home.html">Aryan Kushwaha</a>
+            <a href="home.html">Kamil Saifi</a>
+            <a href="home.html">Shrijan Maharjan</a>
+            <a href="home.html">Roshan Shrestha</a>
+        </div>
+    </div>
+</footer>
+
+</html>

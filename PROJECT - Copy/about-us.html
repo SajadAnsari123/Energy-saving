@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Use Energy-Efficient Appliances?</title>
+    <link rel="stylesheet" href="copystyle.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <style>
+              .active {
+    color: white;
+    text-decoration: none;
+    padding: 10px 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+.active:hover {
+    background-color: #73ea2e;
+    color: white;
+    box-shadow: 0 4px 10px #363736;
+    transform: scale(1.05);
+}
+        .mainbox {
+            height: 10vh;
+            position: relative;
+            background-position: center center;
+            background-size: max(1400, 100vw);
+            background-repeat: no-repeat;
+        }
+
+        .mainbox .bbox {
+            background-color: rgb(0, 0, 0);
+            height: 80vh;
+            width: 100%;
+            opacity: 0.2;
+            position: absolute;
+            top: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            max-width: 100vw;
+            margin: auto;
+            height: 65px;
+        }
+
+        .toc-container {
+            width: 500px;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 60px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .toc-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .toc-header i {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .toc-list {
+            padding-left: 20px;
+        }
+
+        .toc-list li {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        .sectionfirstt {
+            align-items: center;
+            justify-content: space-between;
+            max-width: 80vw;
+            margin: auto;
+            padding: 20px 20px;
+        }
+
+        .sectionfirstt p {
+            margin-top: 0;
+            line-height: 1.6;
+        }
+
+        .sectionfirstt h2 {
+            margin-bottom: 15px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .gapp h2 {
+            margin-top: 70px;
+        }
+
+        .bbox-container {
+            width: 80vw;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 50px 120px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .bbox-container h3 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .marg {
+            margin-top: 30px;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: auto;
+            flex-wrap: wrap;
+        }
+
+        .footer-item {
+            flex: 1;
+            min-width: 200px;
+            text-align: left;
+            padding: 10px;
+        }
+
+        .footer-item h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            border-bottom: 2px solid #555;
+            padding-bottom: 5px;
+        }
+
+        .footer-item a {
+            display: block;
+            color: #ddd;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 5px 0;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .footer-item a:hover {
+            color: #55ff55;
+        }
+
+        .footer {
+            width: 100%;
+            background-color: #222;
+            color: white;
+            padding-top: 30px;
+            text-align: center;
+            padding-bottom: 50px;
+            margin-bottom: 0;
+        }
+
+        .padd {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .mainbox nav {
+            background-color: rgb(14, 25, 8);
+        }
+
+        .mainbox nav a {
+            color: white;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            background-color: #40bd0b;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease, transform 0.2s;
+        }
+
+        button:hover {
+            background-color: #444;
+            transform: scale(1.05);
+        }
+        nav a {
+    color: white;
+    text-decoration: none;
+}
+
+ /* ----------- Responsive Styles ----------- */
+ @media (max-width: 768px) {
+        .toc-container,
+        .bbox-container {
+            width: 90vw;
+            margin: 20px auto;
+            padding: 15px;
+        }
+
+        .sectionfirstt h2 {
+            font-size: 24px;
+        }
+
+        nav {
+            flex-direction: column;
+            align-items: flex-start;
+            height: auto;
+            padding: 10px;
+        }
+
+        nav a {
+            display: block;
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        .footer-container {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .footer-item {
+            min-width: 100%;
+            padding: 10px 20px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .sectionfirstt h2 {
+            font-size: 20px;
+        }
+
+        .sectionfirstt p {
+            font-size: 14px;
+        }
+
+        .toc-list li {
+            font-size: 14px;
+        }
+
+        .footer-item h4 {
+            font-size: 16px;
+        }
+
+        button {
+            font-size: 0.9rem;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="mainbox">
+        <header>
+            <nav>
+                <span><a href="home.html"> <img src="logo.png" alt="Logo" width="90px"> </a> </span>
+                <a class="active" href="Home.html">Home</a>
+                <a  class="active" href="blog.html">Blog</a>
+                <a  class="active" href="calculator.html">Calculate Savings</a>
+                <a  class="active" href="userStoriesblog.html">User Stories</a>
+                <a  class="active" href="faq.html">FAQ's</a>
+                <div class="auth-buttons">
+                    <a href="login.html">
+                        <button>Log Out</button>
+                    </a>
+                </div>
+            </nav>
+        </header>
+    </div>
+
+    <section class="ffirstt">
+        <div class="bbox-container">
+            <h3>🧑&zwj;💻 About Us</h3>
+            <p>We are a passionate team of Bachelor of Computer Science (BCS) students from <strong>IIMS College</strong>,
+                united by our shared love for technology, innovation, and problem-solving. Our diverse skills and
+                collaborative spirit drive us to build solutions that make a real impact.</p>
+
+            <div class="toc-list">
+                <p><strong>👨&zwj;💼 Sajad Ansari &mdash; Team Manager &amp; Coder</strong><br>Sajad leads the team with
+                    vision, coordination, and code. As the Team Manager, he ensures smooth communication and task
+                    delegation, while also actively contributing to the development process with his strong coding
+                    skills and logical approach.</p>
+            </div><br>
+
+            <div class="toc-list">
+                <p><strong>👨&zwj;💻 Aryan Kushwaha</strong><br>Our creative mind with a knack for design and user
+                    experience. Aryan blends functionality with aesthetics, crafting intuitive and visually appealing
+                    interfaces.</p>
+            </div><br>
+
+            <div class="toc-list">
+                <p><strong>🧠 Kamil Saifi</strong><br>Detail-oriented and analytical, Kamil excels in backend
+                    development and database management. He ensures that our projects are efficient, secure, and
+                    scalable.</p>
+            </div><br>
+
+            <div class="toc-list">
+                <p><strong>💡 Shrijan Maharjan</strong><br>Known for his innovative ideas and out-of-the-box thinking,
+                    Shrijan is the team’s problem solver who constantly pushes boundaries and brings fresh perspectives.</p>
+            </div><br>
+
+            <div class="toc-list">
+                <p><strong>⚙️ Roshan Shrestha</strong><br>Tech-savvy and reliable, Roshan bridges theory and practice,
+                    contributing strong coding skills and ensuring technical precision in every line of code.</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+<footer class="footer">
+    <div class="padd">Welcome to Energy Saver..! </div>
+
+    <div class="footer-container">
+        <div class="footer-item">
+            <h4>Company</h4>
+            <a href="home.html">Home</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact-us.html">Contact Us</a>
+        </div>
+
+        <div class="footer-item">
+            <h4>Quick Links</h4>
+            <a href="faq.html">FAQ</a>
+            <a href="userStoriesblog.html">User Stories</a>
+            <a href="calculator.html">Calculate Savings</a>
+        </div>
+
+        <div class="footer-item">
+            <h4>Orders</h4>
+            <a href="about-us.html">About Us</a>
+            <a href="terms&condition.html">Terms-Conditions</a>
+            <a href="privacy-policy.html">Privacy-Policy</a>
+        </div>
+
+        <div class="footer-item">
+            <h4>Team Member</h4>
+            <a href="home.html">Sajad Ansari</a>
+            <a href="home.html">Aryan Kushwaha</a>
+            <a href="home.html">Kamil Saifi</a>
+            <a href="home.html">Shrijan Maharjan</a>
+            <a href="home.html">Roshan Shrestha</a>
+        </div>
+    </div>
+</footer>
+
+</html>
